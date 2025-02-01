@@ -1,0 +1,97 @@
+/* Importing fonts */
+@import "@fontsource/poppins";
+@import "@fontsource/roboto";
+
+/* Tailwind Base Setup */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00bfff, #90ee90);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #1e90ff, #32cd32);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Keyframes for spinning animation */
+@keyframes borderspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spining Border */
+.gradient-border {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  z-index: -1;
+  padding: 3px;
+  background-image: conic-gradient(from 0deg, #00bfff 65%, #00ced1, #1e90ff);
+  animation: borderspin 5s linear 1 forwards;
+}
+
+/* Glow Effect */
+.gradient-glow {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  z-index: -1;
+  blur: 1.5rem;
+  filter: blur(11.5rem);
+  opacity: 0.5;
+  background-image: conic-gradient(from 0deg, #00bfff 65%, #00ced1, #1e90ff);
+  animation: borderspin 5s linear 1 forwards;
+}
+
+/* Utility classes */
+@layer utilities {
+  .header {
+    @apply flex justify-between items-center sm:px-24 px-5 py-2 absolute top-0 bg-transparent right-0 left-0;
+  }
+
+  .max-container {
+    @apply pb-10 pt-6 px-5 sm:px-24;
+  }
+
+  .head-text {
+    @apply sm:text-4xl text-3xl font-bold sm:leading-snug font-heading;
+  }
+
+  .subhead-text {
+    @apply font-normal text-lg sm:text-xl relative font-sans;
+  }
+}
