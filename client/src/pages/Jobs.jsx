@@ -2,7 +2,7 @@ import { useState } from "react";
 import { jobs } from "../utils";
 import { jobs_bg } from "../assets";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { FaSearch, FaArrowRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 const Jobs = () => {
@@ -32,7 +32,10 @@ const Jobs = () => {
         <div className="p-8 rounded-lg backdrop-blur-2xl bg-opacity-80 text-center w-full max-w-xl mx-auto">
           <h1
             className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent font-heading"
-            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
+            style={{
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+              color: "white",
+            }} // Added text color as white here
           >
             Find Your Dream Job
           </h1>
@@ -45,10 +48,10 @@ const Jobs = () => {
               placeholder="Search jobs..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="px-4 py-2 rounded-md text-black w-64 sm:w-96 focus:outline-1"
+              className="px-4 py-2 rounded-md text-black w-full focus:outline-1 border-2 border-gray-300"
             />
-            <button className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-teal-500 hover:to-blue-500 px-4 py-2 rounded-md text-white hover:bg-blue-600">
-              Search
+            <button className="bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-500 hover:text-white hover:border-blue-500 px-4 py-2 rounded-md transition-all duration-300">
+              <FaSearch />
             </button>
           </div>
         </div>
@@ -72,9 +75,10 @@ const Jobs = () => {
 
               <Link
                 to={`/job-details/${job.id}`}
-                className="mt-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white hover:from-teal-500 hover:to-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700 max-w-xs self-start"
+                className="mt-4 flex items-center justify-center gap-2 text-blue-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 px-4 py-2 rounded-lg transition-all duration-300 max-w-xs self-start border-2 border-blue-500"
               >
-                View Post <FaArrowRight className="inline" />
+                <span>View Post</span>
+                <FaArrowRight className="inline" />
               </Link>
             </div>
           ))

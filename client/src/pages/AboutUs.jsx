@@ -31,15 +31,15 @@ const AboutUs = () => {
         <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <section className="max-container mx-auto xl:mx-20 font-sans">
-        <section className="text-center py-16 max-container">
+      <section className="max-container mx-auto xl:mx-2 font-sans">
+        <section className="text-start py-0 sm:py-8">
           <h1
-            className="head-text py-2 inline-block lg:text-5xl text-center text-[#2d6a4f] mb-4 font-semibold bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent"
+            className="head-text py-2 inline-block lg:text-5xl text-center text-[#2d6a4f] mb-2 sm:mb-4 font-semibold bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
           >
             About Care2 Training Consultancy
           </h1>
-          <p className="text-xl max-w-4xl mx-auto mb-5">
+          <p className="text-xl max-w-6xl mb-4">
             We are committed to providing expert visa assistance and guiding
             students through every step of their study abroad journey. Whether
             it's about academic programs, visa applications, or career

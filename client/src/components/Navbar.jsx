@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center lg:px-28 px-5 py-2 md:py-1 bg-white sm:bg-transparent backdrop-blur-md border-b-2 border-b-gray-300 absolute top-0 right-0 left-0 z-30">
+    <nav className="flex justify-between items-center lg:px-28 px-5 py-2 md:py-1 bg-white sm:bg-transparent backdrop-blur-lg border-b-2 border-b-blue-200 absolute top-0 right-0 left-0 z-30">
       {/* Care2 Logo */}
       <Link to="/" className="w-16 h-12 md:w-28 md:h-20">
         {/* Adjusted size */}
@@ -24,7 +24,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <ul className="lg:text-lg hidden md:flex items-center gap-3 lg:gap-6 xl:gap-7 md:font-semibold">
+      <ul className="lg:text-lg hidden md:flex items-center gap-3 lg:gap-4 xl:gap-5 md:font-semibold">
         <li>
           <Link
             to="/"
@@ -34,10 +34,11 @@ const Navbar = () => {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1D86EF] to-[#0F53DB] transition-all duration-700 group-hover:w-full"></span>
           </Link>
         </li>
+        <span className="text-blue-50 mx-0">|</span> {/* Separator */}
         {/* Services Dropdown */}
         <li className="relative group">
-          <button className="cursor-pointer bg-gradient-to-r from-[#1D86EF] to-[#0F53DB] bg-clip-text text-transparent">
-            Services <FaAngleDown className="inline-block text-[#0F53DB]" />
+          <button className="cursor-pointer bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
+            Services <FaAngleDown className="inline-block text-[#ffffff]" />
           </button>
           <div className="absolute left-0 hidden mt-0 bg-white border-2 border-gray-300 rounded-lg shadow-xl group-hover:block min-w-max backdrop-blur-md">
             <ul className="p-2">
@@ -58,7 +59,7 @@ const Navbar = () => {
             </ul>
           </div>
         </li>
-
+        <span className="text-gray-50 mx-0">|</span> {/* Separator */}
         <li>
           <Link
             to="/jobs"
@@ -68,6 +69,7 @@ const Navbar = () => {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1D86EF] to-[#0F53DB] transition-all duration-700 group-hover:w-full"></span>
           </Link>
         </li>
+        <span className="text-gray-50 mx-0">|</span> {/* Separator */}
         <li>
           <Link
             to="/consultation"
@@ -77,7 +79,7 @@ const Navbar = () => {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1D86EF] to-[#0F53DB] transition-all duration-700 group-hover:w-full"></span>
           </Link>
         </li>
-
+        <span className="text-gray-50 mx-0">|</span> {/* Separator */}
         {/* About Us Dropdown Menu */}
         <li className="relative group">
           <button className="cursor-pointer bg-gradient-to-r from-[#1D86EF] to-[#0F53DB] bg-clip-text text-transparent">
@@ -102,10 +104,10 @@ const Navbar = () => {
             </ul>
           </div>
         </li>
-
+        <span className="text-gray-50 mx-0">|</span> {/* Separator */}
         <Link
           to="#"
-          className="hidden md:block ml-6 px-6 py-2.5 text-white shadow-md rounded-lg border-2 border-[#1D86EF] bg-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-[#1D86EF] hover:to-[#0F53DB] hover:border-transparent hover:shadow-lg transform hover:-translate-y-0.5"
+          className="hidden md:block ml-6 px-6 py-2.5 text-white hover:text-white shadow-md rounded-lg border-2 border-blue-200 bg-transparent transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 hover:border-transparent hover:shadow-lg transform hover:-translate-y-0.5"
         >
           Make an Appointment
         </Link>

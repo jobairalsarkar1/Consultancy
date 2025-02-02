@@ -8,6 +8,7 @@ import {
   Footer,
   StudyAbroadForm,
   WorkLiveAbroadForm,
+  Widget,
 } from "./components";
 import {
   AboutUs,
@@ -23,6 +24,8 @@ import {
 } from "./pages";
 
 const App = () => {
+  const phoneNumber = "+880123456789";
+
   return (
     <Router>
       <main>
@@ -49,6 +52,7 @@ const App = () => {
           <Route path="/admin-panel/*" element={<AdminPanel />} />
         </Routes>
         <Footer />
+        <Widget phoneNumber={phoneNumber} />
       </main>
     </Router>
   );

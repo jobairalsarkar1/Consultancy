@@ -28,13 +28,32 @@ export const services = [
 ];
 
 export const benefits = [
-  "Expert guidance from experienced consultants",
-  "Personalized support tailored to your goals",
-  "Comprehensive knowledge of visa processes",
-  "Access to a global network of opportunities",
-  "Commitment to your success every step of the way",
+  {
+    question: "What kind of guidance do you provide?",
+    answer:
+      "We offer expert guidance from experienced consultants who understand the challenges you may face and provide solutions tailored to your needs.",
+  },
+  {
+    question: "How personalized is your support?",
+    answer:
+      "Our support is highly personalized, ensuring that it aligns with your individual goals and aspirations.",
+  },
+  {
+    question: "Do you assist with the visa process?",
+    answer:
+      "Yes, we have comprehensive knowledge of visa processes and assist you in navigating through them smoothly.",
+  },
+  {
+    question: "Can I access global opportunities?",
+    answer:
+      "Yes, we offer access to a global network of opportunities in various countries and industries.",
+  },
+  {
+    question: "What commitment do you have towards my success?",
+    answer:
+      "We are committed to supporting your success at every step, from initial consultation to post-arrival services.",
+  },
 ];
-
 export const reviews = [
   {
     name: "John Doe",

@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
-import { MdCheckCircle } from "react-icons/md";
-import { benefits } from "../utils";
-import { useInView } from "react-intersection-observer";
+import { MdCheckCircle, MdArrowDropDown } from "react-icons/md";
 import { FaPlus, FaPercent } from "react-icons/fa";
-import { Reviews } from "../components";
+import { useInView } from "react-intersection-observer";
+import { benefits } from "../utils";
 
-/* This custom component is for showing the dynamic numbers instead of static */
 const AnimatedNumber = ({ value }) => {
   const [count, setCount] = useState(0);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  /* After each step time the count will increase */
   useEffect(() => {
     if (inView) {
       let start = 0;
@@ -29,77 +26,89 @@ const AnimatedNumber = ({ value }) => {
   }, [inView, value]);
 
   return (
-    <h2 ref={ref} className="text-2xl sm:text-4xl font-bold text-black">
+    <h2 ref={ref} className="text-2xl sm:text-4xl font-bold text-white">
       {count}
     </h2>
   );
 };
 
 const ChooseUs = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
-    <section className="max-container bg-[#f7f9f9] py-4 px-6">
-      {/* <h1 className="head-text text-[#2d6a4f] mb-6 text-center">
-        Why Choose Us?
-      </h1> */}
-      <div className="text-center">
-        <h1
-          className="head-text inline-block lg:text-4xl text-center text-[#2d6a4f] mb-9 font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
-          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
-        >
-          Why Choose Care2 Training Consultancy?
-        </h1>
-      </div>
-      <div className="px-2 grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between">
-        {/* Benefits List */}
-        <ul className="space-y-6">
+    <section className="max-container bg-[#f7f9f9] py-12 px-8">
+      <h1 className="head-text lg:text-4xl text-start text-[#2d6a4f] mb-8 py-2 font-semibold bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+        Why Choose Care2 Training Consultancy?
+      </h1>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 justify-between">
+        {/* Benefits List with Accordion */}
+        <ul className="space-y-4">
           {benefits.map((benefit, index) => (
-            <li
-              key={index}
-              className="flex items-start space-x-4 text-lg text-gray-700"
-            >
-              <MdCheckCircle
-                className="h-6 w-6 text-green-500"
-                aria-label="check icon"
-              />
-              <span className="text-xl sm:text-2xl font-sans">{benefit}</span>
+            <li key={index} className="text-lg text-gray-700">
+              <div
+                className="flex items-center justify-between cursor-pointer p-5 bg-white shadow-lg rounded-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => handleToggle(index)}
+              >
+                <div className="flex items-center space-x-4">
+                  <MdCheckCircle
+                    className="h-7 w-7 text-green-500"
+                    aria-label="check icon"
+                  />
+                  <span className="text-xl sm:text-2xl font-sans font-medium text-gray-800">
+                    {benefit.question}
+                  </span>
+                </div>
+                <MdArrowDropDown
+                  className={`w-7 h-7 text-gray-600 transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <div
+                className={`transition-all duration-500 ease-out overflow-hidden ${
+                  activeIndex === index
+                    ? "max-h-screen opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <p className="mt-3 pl-10 text-gray-600">{benefit.answer}</p>
+              </div>
             </li>
           ))}
         </ul>
 
         {/* Achievements/Statistics */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="sm:row-span-2 bg-gradient-to-r from-blue-400 to-blue-700 p-8 rounded-xl shadow-lg text-center flex flex-col items-center justify-center">
-            {/* <h2 className="text-2xl sm:text-4xl font-bold text-black">
-              10,000+
-            </h2> */}
-            <span className="flex items-center justify-center">
-              {/* This component is responsible for showing dynamic number */}
+        <div className="grid grid-cols-2 gap-6">
+          <div className="sm:row-span-2 bg-gradient-to-r from-blue-600 to-blue-800 p-10 rounded-xl shadow-lg text-center flex flex-col items-center justify-center">
+            <span className="flex items-center justify-center text-white">
               <AnimatedNumber value={2000} />
-              <FaPlus className="w-6 h-6" />
+              <FaPlus className="w-6 h-6 ml-2" />
             </span>
-            <p className="text-xl sm:text-2xl font-semibold text-gray-800">
+            <p className="text-xl sm:text-2xl font-semibold text-white">
               Total Clients
             </p>
           </div>
-          <div className="bg-gradient-to-r from-green-400 to-green-600 p-6 rounded-lg shadow-md text-center flex flex-col items-center justify-center">
-            {/* <h2 className="text-2xl sm:text-4xl font-bold text-black">98%</h2> */}
-            <span className="flex items-center justify-center">
+          <div className="bg-gradient-to-r from-gray-600 to-gray-800 p-8 rounded-lg shadow-md text-center flex flex-col items-center justify-center">
+            <span className="flex items-center justify-center text-white">
               <AnimatedNumber value={98} />
-              <FaPercent className="w-6 h-6" />
+              <FaPercent className="w-6 h-6 ml-2" />
             </span>
-            <p className="text-xl sm:text-2xl font-semibold text-gray-800">
+            <p className="text-xl sm:text-2xl font-semibold text-white">
               Success Rate
             </p>
           </div>
-          <div className="col-span-2 sm:col-span-1 bg-gradient-to-r from-yellow-300 to-yellow-500 p-6 rounded-lg shadow-md text-center flex flex-col items-center justify-center">
-            {/* <h2 className="text-2xl sm:text-4xl font-bold text-black">10+</h2> */}
-            {/* <AnimatedNumber value={10} /> */}
-            <span className="flex items-center justify-center">
+          <div className="col-span-2 sm:col-span-1 bg-gradient-to-r from-black to-gray-800 p-8 rounded-lg shadow-md text-center flex flex-col items-center justify-center">
+            <span className="flex items-center justify-center text-white">
               <AnimatedNumber value={10} />
-              <FaPlus className="w-6 h-6" />
+              <FaPlus className="w-6 h-6 ml-2" />
             </span>
-            <p className="text-xl sm:text-2xl font-semibold text-gray-800">
-              Experience
+            <p className="text-xl sm:text-2xl font-semibold text-white">
+              Experience (Years)
             </p>
           </div>
         </div>

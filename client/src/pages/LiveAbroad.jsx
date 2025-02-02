@@ -36,21 +36,32 @@ const LiveAbroad = () => {
 
       {/* Hero Section */}
       <section
-        className="hero relative h-auto lg:h-[550px] py-28 text-center text-white max-container flex flex-col items-center justify-center"
+        className="hero relative h-[500px] lg:h-[550px] pt-36 sm:pt-30 text-center text-white max-container flex flex-col items-center justify-center"
         // style={{ backgroundImage: "url(https://placehold.co/1500x600)" }}
         aria-label="Live Abroad Hero Section"
       >
         {/* Background image */}
-        <div className="absolute inset-0 w-full h-full bg-cover bg-center">
+        {/* <div className="absolute inset-0 w-full h-full bg-cover bg-center">
           <img
             src={abroad_live}
             alt="Study Abroad Background"
             className="w-full h-full object-cover opacity-100" // Apply opacity to the image only
             aria-hidden="true"
           />
+        </div> */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100`}
+            style={{
+              backgroundImage: `url(${abroad_live})`,
+              // filter: fade ? "blur(0px)" : "blur(10px)",
+              filter: "blur(2px)",
+              transition: "opacity 1s ease-in-out, filter 0.5s ease-in-out",
+            }}
+          ></div>
         </div>
         <h1
-          className="text-4xl z-10 lg:text-5xl xl:text-6xl font-extrabold mb-4 text-white font-heading"
+          className="text-4xl z-10 lg:text-5xl xl:text-6xl font-extrabold mb-4 mt-10 text-white font-heading"
           // className="text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent font-heading"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
           itemProp="headline"
@@ -78,12 +89,12 @@ const LiveAbroad = () => {
         aria-label="Why Study Abroad Section"
       >
         <h2
-          className="inline-block text-3xl lg:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"
+          className="inline-block text-3xl lg:text-4xl font-extrabold mt-2 mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent"
           itemProp="name"
         >
           Why Live Abroad?
         </h2>
-        <p className="text-lg md:text-xl max-w-4xl mx-auto mb-6">
+        <p className="text-lg md:text-xl max-w-7xl mx-auto mb-6">
           Studying abroad offers countless benefits, from learning new languages
           and cultures to expanding your global network. Whether you're aiming
           to enhance your education or gain hands-on experience in a foreign
@@ -185,7 +196,7 @@ const LiveAbroad = () => {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-16 max-container bg-gradient-to-b from-white to-blue-50">
+      {/* <section className="py-16 max-container bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto text-center">
           <h2 className="inline-block text-3xl sm:text-4xl  font-extrabold mb-8 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
             Hear from Our Happy Expats
@@ -222,7 +233,7 @@ const LiveAbroad = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

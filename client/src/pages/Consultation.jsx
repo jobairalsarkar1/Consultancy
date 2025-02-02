@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 const Consultation = () => {
   return (
-    <section className="max-container min-h-screen bg-[#f7f9f9] font-sans py-16 px-6 mt-20">
+    <section className="max-container min-h-screen bg-[#f7f9f9] py-16 font-sans">
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Consultation Services | Care2 Training Consultancy</title>
@@ -26,19 +26,33 @@ const Consultation = () => {
         />
       </Helmet>
 
-      <div className="text-center">
+      {/* <div className="text-center">
         <h1
           className="head-text inline-block lg:text-5xl text-center text-[#2d6a4f] mb-7 mt-5 font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
         >
           Our Consultation Services
         </h1>
-      </div>
+      </div> */}
+      <section className="text-start py-0 sm:py-8 mt-16">
+        <h1
+          className="head-text py-2 inline-block lg:text-5xl text-center text-[#2d6a4f] mb-2 sm:mb-4 font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent"
+          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
+        >
+          Our Consultation Services
+        </h1>
+        <p className="text-xl max-w-6xl mb-4">
+          We are committed to providing expert visa assistance and guiding
+          students through every step of their study abroad journey. Whether
+          it's about academic programs, visa applications, or career
+          opportunities, we are your trusted partner every step of the way.
+        </p>
+      </section>
 
       <div className="space-y-12">
         {/* Study Abroad */}
         <article
-          className="flex flex-col lg:flex-row items-center bg-white shadow-lg rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-2xl transition duration-300"
+          className="flex flex-col lg:flex-row items-center bg-white shadow-md rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-xl transition duration-300"
           aria-labelledby="study-abroad-title"
         >
           <img
@@ -51,7 +65,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="study-abroad-title"
-                className="inline-block text-2xl font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
+                className="inline-block text-3xl font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Study Abroad Consultation
               </h2>
@@ -86,7 +100,7 @@ const Consultation = () => {
 
         {/* Work Abroad */}
         <article
-          className="flex flex-col lg:flex-row-reverse items-center bg-white shadow-lg rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-2xl transition duration-300"
+          className="flex flex-col lg:flex-row-reverse items-center bg-white shadow-md rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-xl transition duration-300"
           aria-labelledby="work-abroad-title"
         >
           <img
@@ -99,7 +113,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="work-abroad-title"
-                className="text-2xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
+                className="text-3xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Work Abroad Assistance
               </h2>
@@ -130,7 +144,7 @@ const Consultation = () => {
 
         {/* Live Abroad */}
         <article
-          className="flex flex-col lg:flex-row items-center bg-white shadow-lg rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-2xl transition duration-300"
+          className="flex flex-col lg:flex-row items-center bg-white shadow-md rounded-xl overflow-hidden p-6 lg:p-8 hover:shadow-xl transition duration-300"
           aria-labelledby="live-abroad-title"
         >
           <img
@@ -143,7 +157,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="live-abroad-title"
-                className="text-2xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
+                className="text-3xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Relocation & Immigration Services
               </h2>

@@ -14,6 +14,7 @@ import Apponitments from "./Appointments";
 import AddDestinations from "./AddDestinations";
 import Applications from "./Applications";
 import Marquee from "./Marquee";
+import Widget from "./Widget";
 import Footer from "./Footer";
 
 export {
@@ -33,5 +34,6 @@ export {
   Apponitments,
   Applications,
   Marquee,
+  Widget,
   Footer,
 };

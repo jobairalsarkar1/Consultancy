@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            fade ? "opacity-100" : "opacity-100"
+            fade ? "opacity-100" : "opacity-0"
           }`}
           style={{
             backgroundImage: `url(${images[currentImage]})`,
