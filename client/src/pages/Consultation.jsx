@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 const Consultation = () => {
   return (
-    <section className="max-container min-h-screen bg-[#f7f9f9] font-sans py-16 px-6 mt-16">
+    <section className="max-container min-h-screen bg-[#f7f9f9] font-sans py-16 px-6 mt-20">
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Consultation Services | Care2 Training Consultancy</title>
@@ -28,7 +28,7 @@ const Consultation = () => {
 
       <div className="text-center">
         <h1
-          className="head-text inline-block lg:text-4xl text-center text-[#2d6a4f] mb-7 mt-5 font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+          className="head-text inline-block lg:text-5xl text-center text-[#2d6a4f] mb-7 mt-5 font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
         >
           Our Consultation Services
@@ -51,7 +51,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="study-abroad-title"
-                className="inline-block text-2xl font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent mb-2"
+                className="inline-block text-2xl font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Study Abroad Consultation
               </h2>
@@ -76,7 +76,7 @@ const Consultation = () => {
             </p>
             <a
               href="/study-abroad"
-              className="mt-4 w-fit bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-blue-500 hover:to-blue-700 hover:shadow-lg transition duration-300"
+              className="mt-4 w-fit bg-gradient-to-r from-[#1d86ef] to-[#0f53db] text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-[#1d86ef] hover:to-[#0f53db] hover:shadow-lg transition duration-300"
               aria-label="Learn more about study abroad consultation"
             >
               Explore Study Abroad Services
@@ -99,7 +99,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="work-abroad-title"
-                className="text-2xl inline-block font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent mb-2"
+                className="text-2xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Work Abroad Assistance
               </h2>
@@ -120,7 +120,7 @@ const Consultation = () => {
             </p>
             <a
               href="/work-abroad"
-              className="mt-6 w-fit bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-blue-500 hover:to-blue-700 hover:shadow-lg transition duration-300"
+              className="mt-6 w-fit bg-gradient-to-r from-[#1d86ef] to-[#0f53db] text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-[#1d86ef] hover:to-[#0f53db] hover:shadow-lg transition duration-300"
               aria-label="Learn more about work abroad services"
             >
               Discover Work Abroad Opportunities
@@ -143,7 +143,7 @@ const Consultation = () => {
             <div className="text-start">
               <h2
                 id="live-abroad-title"
-                className="text-2xl inline-block font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent mb-2"
+                className="text-2xl inline-block font-semibold bg-gradient-to-r from-[#1d86ef] to-[#0f53db] bg-clip-text text-transparent mb-2"
               >
                 Relocation & Immigration Services
               </h2>
@@ -165,7 +165,7 @@ const Consultation = () => {
             </p>
             <a
               href="/live-abroad"
-              className="mt-6 w-fit bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-blue-500 hover:to-blue-700 hover:shadow-lg transition duration-300"
+              className="mt-6 w-fit bg-gradient-to-r from-[#1d86ef] to-[#0f53db] text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-[#1d86ef] hover:to-[#0f53db] hover:shadow-lg transition duration-300"
               aria-label="Learn more about relocation and immigration services"
             >
               Get Immigration & Relocation Help

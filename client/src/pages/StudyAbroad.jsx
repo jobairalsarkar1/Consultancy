@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { countries, universities } from "../utils";
+import { abroad_study } from "../assets";
 
 const StudyAbroad = () => {
   return (
-    <div className="bg-gray-50 min-h-screen mt-20">
+    <div className="bg-gray-50 min-h-screen">
       {/* Add SEO meta tags */}
       <Helmet>
         <title>
@@ -23,26 +24,35 @@ const StudyAbroad = () => {
 
       {/* Hero Section */}
       <section
-        className="hero bg-cover bg-center h-auto lg:h-[400px] py-20 text-center text-white max-container flex flex-col items-center justify-center"
-        style={{ backgroundImage: "url(https://placehold.co/1500x600)" }}
+        className="hero relative h-auto lg:h-[550px] py-28 text-center text-white max-container flex flex-col items-center justify-center"
         aria-label="Study Abroad Hero Section"
       >
+        {/* Background image */}
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center">
+          <img
+            src={abroad_study}
+            alt="Study Abroad Background"
+            className="w-full h-full object-cover opacity-70" // Apply opacity to the image only
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* Text content */}
         <h1
-          className="text-4xl lg:text-5xl xl:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent font-heading"
+          className="text-4xl z-10 lg:text-5xl xl:text-6xl font-extrabold mb-4 text-white font-heading"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
           itemProp="headline"
         >
           Study Abroad, Shape Your Future!
         </h1>
-        <p className="text-lg sm:text-xl font-sans mb-6 px-6 sm:px-32 max-w-full sm:max-w-4xl mx-auto">
+        <p className="text-lg z-10 sm:text-2xl font-sans mb-6 px-6 sm:px-32 max-w-full sm:max-w-5xl mx-auto">
           Experience the world, broaden your horizons, and gain valuable skills
           by studying abroad. Let us guide you through the process with expert
           student visa assistance.
         </p>
         <Link
           to="/study-abroad/apply"
-          // className="bg-blue-600 text-white py-3 px-6 font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition"
-          className="mt-4 w-fit bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-blue-500 hover:to-blue-700 hover:shadow-lg transition duration-300"
+          className="mt-4 w-fit z-10 font-semibold bg-gradient-to-r from-blue-500 to-blue-700 text-white py-3 px-6 rounded-lg shadow-md hover:bg-gradient-to-l hover:from-blue-500 hover:to-blue-700 hover:shadow-lg transition duration-300"
           title="Start your study abroad journey now"
         >
           Let's Discuss Your Future
@@ -60,7 +70,7 @@ const StudyAbroad = () => {
         >
           Why Study Abroad?
         </h2>
-        <p className="text-lg max-w-4xl mx-auto mb-6">
+        <p className="text-lg md:text-xl max-w-4xl mx-auto mb-6">
           Studying abroad offers countless benefits, from learning new languages
           and cultures to expanding your global network. Whether you're aiming
           to enhance your education or gain hands-on experience in a foreign

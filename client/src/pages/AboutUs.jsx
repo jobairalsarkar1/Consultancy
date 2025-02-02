@@ -34,7 +34,7 @@ const AboutUs = () => {
       <section className="max-container mx-auto xl:mx-20 font-sans">
         <section className="text-center py-16 max-container">
           <h1
-            className="head-text inline-block lg:text-4xl text-center text-[#2d6a4f] mb-4 font-semibold bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+            className="head-text py-2 inline-block lg:text-5xl text-center text-[#2d6a4f] mb-4 font-semibold bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)" }}
           >
             About Care2 Training Consultancy
@@ -56,7 +56,7 @@ const AboutUs = () => {
           />
           <div className="xl:w-2/3">
             <div className="text-start">
-              <h2 className="text-3xl inline-block font-semibold mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl inline-block font-semibold mb-4 bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent">
                 Who We Are
               </h2>
             </div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
           />
           <div className="xl:w-2/3">
             <div className="text-start">
-              <h2 className="text-3xl inline-block font-semibold mb-4 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl inline-block font-semibold mb-4 bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent">
                 Our Mission
               </h2>
             </div>
@@ -102,14 +102,14 @@ const AboutUs = () => {
         {/* Why Choose Us - With Icons */}
         <div className="bg-[#f4f8fa] px-12 pb-12 pt-8 mb-16 rounded-xl shadow-lg transition-shadow border duration-300">
           <div className="text-center">
-            <h2 className="text-3xl inline-block font-semibold text-center mb-8 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl inline-block font-semibold text-center mb-8 bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent">
               Why Choose Us?
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {/* Personalized Support */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaUsers className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaUsers className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-2">
                 Personalized Support
               </h3>
@@ -120,7 +120,7 @@ const AboutUs = () => {
             </div>
             {/* Trusted Partnerships */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaHandshake className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaHandshake className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-2">
                 Trusted Partnerships
               </h3>
@@ -131,7 +131,7 @@ const AboutUs = () => {
             </div>
             {/* Expert Guidance */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaGraduationCap className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaGraduationCap className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-2">
                 Expert Guidance
               </h3>
@@ -142,7 +142,7 @@ const AboutUs = () => {
             </div>
             {/* Global Reach */}
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaGlobe className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaGlobe className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-2">
                 Global Reach
               </h3>
@@ -157,14 +157,14 @@ const AboutUs = () => {
         {/* Core Values Section */}
         <div className="text-center">
           <div className="text-center">
-            <h2 className="text-3xl inline-block font-semibold mb-8 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl inline-block font-semibold mb-8 bg-gradient-to-r from-[#00BFFF] to-[#1E90FF] bg-clip-text text-transparent">
               Our Core Values
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Integrity */}
             <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaHandshake className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaHandshake className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-4">
                 Integrity
               </h3>
@@ -175,7 +175,7 @@ const AboutUs = () => {
             </div>
             {/* Commitment */}
             <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaUsers className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaUsers className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-4">
                 Commitment
               </h3>
@@ -186,7 +186,7 @@ const AboutUs = () => {
             </div>
             {/* Excellence */}
             <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <FaGlobe className="text-5xl text-teal-500 mb-4 mx-auto" />
+              <FaGlobe className="text-5xl text-[#1E90FF] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold text-[#2d6a4f] mb-4">
                 Excellence
               </h3>

@@ -13,6 +13,7 @@ import JobPostings from "./JobPostings";
 import Apponitments from "./Appointments";
 import AddDestinations from "./AddDestinations";
 import Applications from "./Applications";
+import Marquee from "./Marquee";
 import Footer from "./Footer";
 
 export {
@@ -31,5 +32,6 @@ export {
   JobPostings,
   Apponitments,
   Applications,
+  Marquee,
   Footer,
 };

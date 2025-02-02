@@ -6,6 +6,7 @@ import {
   Contact,
   Hero,
   Reviews,
+  Marquee,
 } from "../components";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <ChooseUs />
       <Reviews />
       <Contact />
+      <Marquee />
     </>
   );
 };

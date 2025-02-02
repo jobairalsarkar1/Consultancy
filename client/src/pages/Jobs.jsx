@@ -27,7 +27,7 @@ const Jobs = () => {
         style={{
           backgroundImage: "url(" + jobs_bg + ")",
         }}
-        className="relative bg-cover bg-center h-80 flex flex-col justify-center items-center text-white sm:bg-none"
+        className="relative bg-cover bg-center h-[380px] flex flex-col justify-center items-center text-white sm:bg-none"
       >
         <div className="p-8 rounded-lg backdrop-blur-2xl bg-opacity-80 text-center w-full max-w-xl mx-auto">
           <h1
